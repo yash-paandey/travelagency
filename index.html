@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header-bar">
+        <header class="header">
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="Company Logo" class="logo">
+                <h1 class="company-name">Regal Asian Journey</h1>
+            </div>
+        </header>
+    </div>
+
+    <div class="Slideshow">
+        <img class="mySlides" src="assets/img1.jpg">
+        <img class="mySlides" src="assets/img2.jpg">
+        <img class="mySlides" src="assets/img3.jpg">
+    </div>
+
+    <div class="places">
+        <!-- First Block -->
+        <div class="place-block">
+            <img class="place-image" src="assets/south_east_asia.jpg" alt="South East Asia">
+            <div class="place-info">
+                <h2>South-East Asia</h2>
+                <p>Known for tropical beaches, historic temples, and night markets.</p>
+                <p><strong>Offer:</strong> 5-night stay + guided tours.</p>
+                <p><strong>Price:</strong> ₹41,000 per person</p>
+            </div>
+        </div>
+
+        <!-- Second Block -->
+        <div class="place-block">
+            <img class="place-image" src="assets/north-asia.jpg" alt="North Asia">
+            <div class="place-info">
+                <h2>North Asia</h2>
+                <p>Famous for snow-covered landscapes and cultural festivals.</p>
+                <p><strong>Offer:</strong> Ski resorts + cultural shows.</p>
+                <p><strong>Price:</strong> ₹65,000 per person</p>
+            </div>
+        </div>
+
+        <!-- Third Block -->
+        <div class="place-block">
+            <img class="place-image" src="assets/east-asia.jpg" alt="East Asia">
+            <div class="place-info">
+                <h2>East Asia</h2>
+                <p>Renowned for its cherry blossoms and cutting-edge cities.</p>
+                <p><strong>Offer:</strong> City tours + local cuisine tasting.</p>
+                <p><strong>Price:</strong> ₹73,000 per person</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="places">
+        <!-- Fourth Block -->
+        <div class="place-block">
+            <img class="place-image" src="assets/central-asia.jpg" alt="Central Asia">
+            <div class="place-info">
+                <h2>Central Asia</h2>
+                <p>Home to the Silk Road, deserts, and ancient cities.</p>
+                <p><strong>Offer:</strong> Camel rides + historical tours.</p>
+                <p><strong>Price:</strong> ₹49,000 per person</p>
+            </div>
+        </div>
+
+        <!-- Fifth Block -->
+        <div class="place-block">
+            <img class="place-image" src="assets/west-asia.jpg" alt="West Asia">
+            <div class="place-info">
+                <h2>West Asia</h2>
+                <p>Known for its deserts, bazaars, and ancient ruins.</p>
+                <p><strong>Offer:</strong> Desert safari + luxury stay.</p>
+                <p><strong>Price:</strong> ₹58,000 per person</p>
+            </div>
+        </div>
+
+        <!-- Sixth Block -->
+        <div class="place-block">
+            <img class="place-image" src="assets/south-asia.jpg" alt="South Asia">
+            <div class="place-info">
+                <h2>South Asia</h2>
+                <p>Rich in history, spirituality, and diverse landscapes.</p>
+                <p><strong>Offer:</strong> Temple tours + beach stay.</p>
+                <p><strong>Price:</strong> ₹33,000 per person</p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 3000); // Change image every 3 seconds
+        }
+    </script>
+
+
+</body>
+</html>
